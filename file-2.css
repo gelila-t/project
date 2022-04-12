@@ -1,0 +1,181 @@
+
+body{
+   background-image: url("b1.png") ;
+   background-attachment: fixed;
+}
+
+a{
+   color:rgb(163, 140, 163);
+}
+
+h2{
+   font-family: cursive;
+   text-align: flex-start;
+}
+
+header{
+   display:flex;
+   position:fixed;
+   width:100%;
+}
+ 
+
+.intro h2{
+   position: relative;
+   margin-top: 20%;
+   margin-left: 30px;
+   text-transform: uppercase;
+   color: transparent;
+}
+.intro h2::before{
+   content: attr(data-text);
+   position: absolute;
+   top:0;
+   left:0;
+   width:0;
+   height:100%;
+   color: black;
+   border-right: transparent solid;
+   border-width: 2px;
+   overflow: hidden;
+   animation-name:intro;
+   animation-duration:8s;
+   animation-timing-function: linear;
+   animation-iteration-count: 1;
+}
+
+@keyframes intro{
+   0%,10%,100%{
+      width: 0;
+   }
+   70%,90%{
+      width: 70%;
+   }
+}
+
+.container{
+   display: flex;
+   width: 100%;
+}
+
+.title{
+   width: 42.4%;
+   text-align: center;
+   text-decoration: overline underline;
+   font-family: 'Courier New', Courier, monospace;
+   background-color:rgb(163, 140, 163);
+}
+
+nav{
+   width: 100%;
+   background-color: black;
+}
+
+nav ul{
+   margin: 0;
+   padding: 30px;
+   list-style-type: none;
+}
+ 
+nav li{
+   display: block;
+   margin-right: 40px;
+   position: relative;
+   float:right;
+}
+
+nav a{
+   color: rgb(163, 140, 163);
+   text-decoration:none;
+   text-transform: uppercase;
+}
+
+nav a:hover{
+   color:rgb(163, 140, 163);
+}
+nav a::before{/*pseudo selectors*/
+   content: '';
+   height: 0.5px;
+   width: 0%;
+   background-color:rgb(163, 140, 163);
+   position:absolute;
+   transition: all ease-in-out 350ms;
+ 
+}
+nav a:hover::before{
+   width:100%;
+}
+
+
+pre ul{
+   list-style-type: square;
+}
+
+.texts{
+   display:grid;
+}
+.contents{
+   display: grid;
+   margin-top: 40%;
+   grid-template-columns: 30% 70%;
+   grid-column-gap:1px;
+   grid-row-gap: 150px;
+}
+
+.key{
+   background-color:rgb(163, 140, 163);
+   text-align: center;
+   grid-column:1/2;  
+}
+#about-me h1,h2{
+   margin-top: 80px;
+}
+#pic{
+   width: 300px;
+   height: 500px;
+   margin-left: 25px;
+}
+
+.value{
+   background-color:black;
+   color: rgb(163, 140, 163);
+   padding-top: 20px;
+   grid-column: 2/4;
+   padding-left: 10px;
+}
+
+.value p{
+   font-size: 18px;
+   padding-left: 30px;
+}
+
+#skills{
+   font-size: xx-large;
+}
+
+#skills h2{
+   margin-top: 50%;
+   text-align: center;
+}
+
+#Certifications{
+   font-size: xx-large;
+}
+
+#Certifications h2{
+   margin-top: 50%;
+}
+
+#Contact{
+   font-size: xx-large;
+}
+
+#Contact h2{
+   margin-top: 25%;
+}
+
+.contents ul{
+   font-size: 17px;
+}
+
+
